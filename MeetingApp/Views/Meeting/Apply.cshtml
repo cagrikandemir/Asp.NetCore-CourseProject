@@ -1,7 +1,27 @@
 @{
 ViewBag.Document="Register Page";
 }
-<h1 class="h4">Kayıt Formu</h1>
-<form action="">
-    <button type="submit" class="btn btm-sm btn btn-outline-primary">Kayıt Ol</button>
+<h1 class="h4 text-center">Register Form</h1>
+<form method="post"action="">
+    <div class="mb-3">
+        <label for="FullName" class="form-label">Name</label>
+        <input type="text" name="FullName" id="FullName" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label for="Phone" class="form-label">Phone</label>
+        <input type="text" name="Phone" id="Phone" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label for="Email" class="form-label">E-mail</label>
+        <input type="text" name="Name" id="Email" class="form-control">
+    </div>
+    <div class="mb-3">
+        <select type="text" name="WillAttend" id="WillAttend" class="form-select">
+            <option value="true">Evet , Geliyorum</option>
+            <option value="false">Hayır , Gelmiyorum</option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn btm-sm btn btn-outline-primary">Register</button>
 </form>
+

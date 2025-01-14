@@ -10,7 +10,13 @@ namespace MeetingApp.Controllers
             return View();
         }
 
+        [HttpGet]
         public IActionResult Apply(){
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Apply(string fullname,int phone,string mail,bool attend){            
             return View();
         }
 

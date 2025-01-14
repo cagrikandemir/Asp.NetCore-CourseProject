@@ -2,6 +2,7 @@
 @{
     ViewBag.Document="Home";
 }
+<main class="text-center">
 <h1 class="h4">@ViewData["Selamlama"] , @ViewData["Name"]</h1>
 <p>Toplantıya Katılma Durumunuzu Bildiriniz.</p>
 <div class="card my-2">
@@ -12,3 +13,5 @@
     </ul>
 </div>
 <a asp-controller="Meeting" asp-action="Apply" class="btn btn-sm btn btn-outline-primary" >Başvuru Yap</a>
+</main>
+
