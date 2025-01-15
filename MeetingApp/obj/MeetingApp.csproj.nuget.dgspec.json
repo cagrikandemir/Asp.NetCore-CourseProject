@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\ali-i\\OneDrive\\Desktop\\.NetCore\\Asp.NetCore-CourseProject\\MeetingApp\\MeetingApp.csproj": {}
+    "C:\\Users\\ali-i\\OneDrive\\Desktop\\.NetCore\\Asp.NetCore-CourseProject\\MeetingApp\\MeetingApp.csproj": {}
   },
   "projects": {
-    "c:\\Users\\ali-i\\OneDrive\\Desktop\\.NetCore\\Asp.NetCore-CourseProject\\MeetingApp\\MeetingApp.csproj": {
+    "C:\\Users\\ali-i\\OneDrive\\Desktop\\.NetCore\\Asp.NetCore-CourseProject\\MeetingApp\\MeetingApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\ali-i\\OneDrive\\Desktop\\.NetCore\\Asp.NetCore-CourseProject\\MeetingApp\\MeetingApp.csproj",
+        "projectUniqueName": "C:\\Users\\ali-i\\OneDrive\\Desktop\\.NetCore\\Asp.NetCore-CourseProject\\MeetingApp\\MeetingApp.csproj",
         "projectName": "MeetingApp",
-        "projectPath": "c:\\Users\\ali-i\\OneDrive\\Desktop\\.NetCore\\Asp.NetCore-CourseProject\\MeetingApp\\MeetingApp.csproj",
+        "projectPath": "C:\\Users\\ali-i\\OneDrive\\Desktop\\.NetCore\\Asp.NetCore-CourseProject\\MeetingApp\\MeetingApp.csproj",
         "packagesPath": "C:\\Users\\ali-i\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\ali-i\\OneDrive\\Desktop\\.NetCore\\Asp.NetCore-CourseProject\\MeetingApp\\obj\\",
+        "outputPath": "C:\\Users\\ali-i\\OneDrive\\Desktop\\.NetCore\\Asp.NetCore-CourseProject\\MeetingApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

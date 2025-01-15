@@ -1,4 +1,5 @@
 
+using MeetingApp.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MeetingApp.Controllers
@@ -16,8 +17,11 @@ namespace MeetingApp.Controllers
         }
 
         [HttpPost]
-        public IActionResult Apply(string fullname,int phone,string mail,bool attend){            
-            return View();
+        public IActionResult Apply(UserInfo model){
+            Repository.CreateUser(model);
+            ViewBag.UserCount=Repository.User.Where(i=>i.WillAttend==true).Count();
+            Console.Write(model);            
+            return View("Thanks",model);
         }
 
         public IActionResult list(){

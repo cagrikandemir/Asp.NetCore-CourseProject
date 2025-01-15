@@ -1,22 +1,24 @@
+@model UserInfo
 @{
 ViewBag.Document="Register Page";
 }
 <h1 class="h4 text-center">Register Form</h1>
 <form method="post"action="">
     <div class="mb-3">
-        <label for="FullName" class="form-label">Name</label>
-        <input type="text" name="FullName" id="FullName" class="form-control">
+        <label asp-for="Name" class="form-label">Name</label>
+        <input  asp-for="Name" class="form-control">
     </div>
     <div class="mb-3">
-        <label for="Phone" class="form-label">Phone</label>
-        <input type="text" name="Phone" id="Phone" class="form-control">
+        <label asp-for="Phone" class="form-label">Phone</label>
+        <input asp-for="Phone" class="form-control">
     </div>
     <div class="mb-3">
-        <label for="Email" class="form-label">E-mail</label>
-        <input type="text" name="Name" id="Email" class="form-control">
+        <label asp-for="Mail" class="form-label">E-mail</label>
+        <input asp-for="Mail" class="form-control">
     </div>
     <div class="mb-3">
-        <select type="text" name="WillAttend" id="WillAttend" class="form-select">
+        <label asp-for="WillAttend" class="form-label">Katılım Durumu</label>
+        <select asp-for="WillAttend" class="form-select">
             <option value="true">Evet , Geliyorum</option>
             <option value="false">Hayır , Gelmiyorum</option>
         </select>
