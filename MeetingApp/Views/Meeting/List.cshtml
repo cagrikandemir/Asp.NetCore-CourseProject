@@ -1,8 +1,9 @@
+@model List<UserInfo>
 @{
     ViewBag.Document="List";
 }
 <main class="text-center">
-<h1>Toplantı Kayıt Listesi</h1>
+<h1 class="h4">Toplantı Kayıt Listesi</h1>
 <table class="table table-bordered">
     <thead>
         <tr>
@@ -11,23 +12,28 @@
             <td></td>
         </tr>
     </thead>
-    <tbody>
-        <tr>
-            <td>Çağrı Kandemir</td>
-            <td>Evet</td>
-            <td><a class="btn btn-sm btn btn-primary" href="#">Detay</a></td>
-        </tr>
-        <tr>
-            <td>Buse Gökmen</td>
-            <td>Evet</td>
-            <td><a class="btn btn-sm btn btn-primary" href="#">Detay</a></td>
-
-        </tr>
-        <tr>
-            <td>Hülya Kandemir</td>
-            <td>Hayır</td>
-            <td><a class="btn btn-sm btn btn-primary" href="#">Detay</a></td>
-        </tr>
+    @{int i=0;}
+    <tbody>   
+            @foreach(var user in Model){
+                var durum=user.WillAttend==true?"Evet":"Hayır";
+                var color=user.WillAttend==true?"table-success":"table-danger";
+                if(user.WillAttend==true){
+                    i++;
+                }
+            <tr class="@color">
+                <td>@user.Name</td>
+                <td>@durum</td>
+                <td>
+                    <a class="btn btn-sm btn btn-primary" asp-controller="Meeting" asp-action="Details" asp-route-id="@user.Id">Detay</a>
+                </td> 
+            </tr>
+            }    
     </tbody>
 </table>
+<div class="card">
+    <div class="card-body">
+        <span>Güncel Katılımcı Sayısı : @i</span>
+    </div>
+</div>
+<a class=" mt-2 btn btn-warning btn btn-sm" asp-controller="Home" asp-action="Index">Ana Menü</a>
 </main>

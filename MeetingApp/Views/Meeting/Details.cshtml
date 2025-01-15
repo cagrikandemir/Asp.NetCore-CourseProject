@@ -1,0 +1,23 @@
+@model UserInfo
+
+@{
+    ViewBag.Document="Başvuru Detay";
+}
+<main class="text-center">
+<h1 class="h4">Başvuru Detay</h1>
+
+@{
+    var color=@Model.WillAttend==true?"primary":"danger";
+    var durum =@Model.WillAttend==true?"Katılıyor":"Katılmıyor";
+}
+
+    <p>
+        <span class="badge text-bg-@color">@durum</span>
+    </p>
+    <p class="mt-3">İsim : @Model.Name</p>
+    <p>Telefon : @Model.Phone</p>
+    <p class="mb-3">E-mail : @Model.Mail</p>
+
+    <a class="btn btn-sm btn btn-outline-@color" asp-controller="Meeting" asp-action="List">Katılımcı Listesi</a>
+
+</main>

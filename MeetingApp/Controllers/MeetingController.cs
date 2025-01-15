@@ -24,8 +24,12 @@ namespace MeetingApp.Controllers
             return View("Thanks",model);
         }
 
-        public IActionResult list(){
-            return View();
+        public IActionResult List(){
+            return View(Repository.User);
+        }
+
+        public IActionResult Details(int id){
+            return View(Repository.GetById(id));
         }
 }
 }
