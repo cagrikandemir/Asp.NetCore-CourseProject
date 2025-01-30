@@ -1,42 +1,37 @@
-﻿@{
+﻿@model Product
+@{
     ViewData["Title"] = "Create Form";
 }
-<form action="Home/Create" method="post">
+<form asp-controller="Home" asp-action="Create" method="post">
 <div class="mb-3">
-    <label for="" class="form-label">Name</label>
-    <input type="text" name="" id="" class="form-control">
+    <label asp-for="Name" class="form-label">Name</label>
+    <input asp-asp-for="Name" class="form-control">
 </div>
 
 <div class="mb-3">
-    <label for="" class="form-label">Despcription</label>
-    <input type="text" name="" id="" class="form-control">
+    <label asp-asp-for="Despcription" class="form-label">Despcription</label>
+    <input asp-asp-for="Despcription" class="form-control">
 </div>
 
 <div class="mb-3">
-    <label for="" class="form-label">Image</label>
-    <input type="text" name="" id="" class="form-control">
+    <label asp-asp-for="Image" class="form-label">Image</label>
+    <input asp-asp-for="Image" class="form-control">
 </div>
 
 <div class="mb-3">
-    <label for="" class="form-label">Price</label>
-    <input type="text" name="" id="" class="form-control">
+    <label asp-asp-for="Price" class="form-label">Price</label>
+    <input asp-asp-for="Price" class="form-control">
 </div>
 
 <div class="mb-3">
-    <label for="" class="form-label">Category</label>
-    <select name="" id="" class="form-select">
+    <label asp-asp-for="CategoryId" class="form-label">Category</label>
+    <select asp-asp-for="CategoryId" asp-items="ViewBag.Categories" class="form-select">
         <option value="0">All</option>
-        @foreach(var item in @ViewBag.Categories){
-            <option value="@item.CategoryId">@item.Name</option>
-        }
     </select>
 </div>
 <div class="mb-3 form-check">
-    <input type="checkbox" name="IsActive" id="IsActive" class="form-check-input">
-        <label for="IsActive" class="form-check-label">Is Active</label>
+    <input asp-for="IsActive" class="form-check-input">
+    <label asp-for="IsActive" class="form-check-label"></label>
 </div>
-
-
-
-<button class="btn btn-sm btn btn-primary" type="submit">Ekle</button>
+<button class="btn btn-primary" type="submit">Ekle</button>
 </form>
