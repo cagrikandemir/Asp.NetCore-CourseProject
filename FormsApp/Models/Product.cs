@@ -10,14 +10,17 @@ namespace FormsApp.Models
         [Required]
         public string? Name { get; set; }
         [Display(Name ="Ürün Fiyatı")]
-        public decimal Price { get; set; }
+        [Required]
+        public decimal? Price { get; set; }
         [Display(Name ="Resim")]
+        [Required]
         public string? Image { get; set; }
-
+        [Required]
         public string? Despcription { get; set; }
         [Display(Name ="IsActive")]
         public bool IsActive { get; set; }
         [Display(Name ="Category")]
-        public int CategoryId { get; set; }
+        [Required]
+        public int? CategoryId { get; set; }
     }
 }

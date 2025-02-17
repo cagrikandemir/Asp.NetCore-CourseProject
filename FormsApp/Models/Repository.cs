@@ -26,7 +26,9 @@ namespace FormsApp.Models
                 return _Products;
             }
         }
-
+        public static void CreateProduct(Product entity){
+            _Products.Add(entity);
+        }
         public static List<Category> Categories{
             get{
                 return _Categories;

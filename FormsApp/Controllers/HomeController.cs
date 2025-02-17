@@ -39,6 +39,14 @@ public class HomeController : Controller
     [HttpPost]
     public IActionResult Create(Product model)
     {
-        return View();
+        if(ModelState.IsValid){
+            Repository.CreateProduct(model);
+            return RedirectToAction("Index");
+        }
+        else{
+            ViewBag.Categories=new SelectList(Repository.Categories,"CategoryId","Name");
+            return View();
+        }
+        
     }
 }
