@@ -13,7 +13,7 @@ public class HomeController : Controller
 
         if(!string.IsNullOrEmpty(key)){
             ViewBag.key=key;
-            products=products.Where(p=>p.Name.ToLower().Contains(key)).ToList();
+            products=products.Where(p=>p.Name!.ToLower().Contains(key)).ToList();
         }
 
         if(!string.IsNullOrEmpty(category) && category!="0"){
@@ -37,9 +37,10 @@ public class HomeController : Controller
         return View();
     }
     [HttpPost]
-    public IActionResult Create(Product model)
+    public IActionResult Create(Product model , IFormFile imageFile)
     {
         if(ModelState.IsValid){
+            model.ProductId=Repository.Products.Count+1;
             Repository.CreateProduct(model);
             return RedirectToAction("Index");
         }

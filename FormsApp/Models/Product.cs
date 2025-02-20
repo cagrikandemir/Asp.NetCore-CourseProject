@@ -13,7 +13,6 @@ namespace FormsApp.Models
         [Required]
         public decimal? Price { get; set; }
         [Display(Name ="Resim")]
-        [Required]
         public string? Image { get; set; }
         [Required]
         public string? Despcription { get; set; }
